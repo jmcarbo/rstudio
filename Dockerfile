@@ -17,6 +17,4 @@ RUN chown root /var/lib/munge
 RUN chown root /etc/munge/munge.key
 RUN chmod 600 /etc/munge/munge.key
 RUN chown root /etc/munge
-RUN echo "#!/bin/bash" > /etc/cont-init.d/munged
-RUN echo "munged" >> /etc/cont-init.d/munged
-RUN chmod +x /etc/cont-init.d/munged
+RUN echo "munged" >> /init
