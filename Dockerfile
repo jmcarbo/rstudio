@@ -18,3 +18,5 @@ RUN chown root /etc/munge/munge.key
 RUN chmod 600 /etc/munge/munge.key
 RUN chown root /etc/munge
 RUN cd /usr/local/bin && curl -fsSL get.nextflow.io | bash
+RUN chmod +rw /usr/local/bin/nextflow
+RUN install2.r rslurm
