@@ -20,3 +20,5 @@ RUN chown root /etc/munge
 RUN cd /usr/local/bin && curl -fsSL get.nextflow.io | bash
 RUN chmod +rw /usr/local/bin/nextflow
 RUN install2.r rslurm
+RUN echo session-timeout-minutes=30 >>/etc/rstudio/rsession.conf
+RUN echo limit-file-upload-size-mb=10240 >>/etc/rstudio/rsession.conf
